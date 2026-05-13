@@ -1,142 +1,522 @@
+
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WithLink 개인정보처리방침</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>withLink Privacy Policy / 개인정보처리방침</title>
+  <meta name="description" content="withLink Privacy Policy in Korean and English.">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #222;
+    :root {
+      --bg: #f6f7ff;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #5b6477;
+      --line: #e5e7ef;
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --primary-soft: #eef0ff;
+      --warn-bg: #fff7ed;
+      --warn-text: #9a3412;
+      --shadow: 0 18px 50px rgba(31, 41, 55, 0.10);
+      --radius: 18px;
     }
-    h1 { font-size: 28px; margin-bottom: 8px; }
-    h2 { font-size: 20px; margin-top: 32px; }
-    p, li { font-size: 15px; }
-    ul { padding-left: 20px; }
-    .date { color: #666; margin-bottom: 32px; }
-    a { color: #2563eb; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(79,70,229,0.12), transparent 34%),
+        radial-gradient(circle at top right, rgba(37,99,235,0.08), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 40px auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #2563eb);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 34px 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: -0.04em;
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 16px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: 18px 0;
+      padding: 12px;
+      background: rgba(246,247,255,0.86);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(229,231,239,0.9);
+      border-radius: 16px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .lang-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, color .12s ease, border-color .12s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+
+    button.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .policy {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      padding: clamp(22px, 4vw, 42px);
+    }
+
+    .hidden { display: none; }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: clamp(21px, 2.5vw, 28px);
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      margin: 38px 0 12px;
+      padding-top: 6px;
+      border-top: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 24px 0 8px;
+    }
+
+    p { margin: 10px 0; }
+
+    ul {
+      margin: 10px 0 14px;
+      padding-left: 22px;
+    }
+
+    li { margin: 6px 0; }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .highlight {
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin: 18px 0;
+    }
+
+    .todo {
+      background: var(--warn-bg);
+      color: var(--warn-text);
+      border: 1px solid #fed7aa;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 18px 0;
+      font-weight: 700;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      margin: 22px 0 0;
+    }
+
+    a {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar, header { position: static; box-shadow: none; }
+      .policy { box-shadow: none; border: none; }
+      .hidden { display: block; }
+      button { display: none; }
+    }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <p class="brand">withLink</p>
+      <p class="subtitle">Privacy Policy / 개인정보처리방침</p>
+    </header>
 
-  <h1>WithLink 개인정보처리방침</h1>
-  <p class="date">최종 업데이트: 2026년 4월 29일</p>
+    <div class="toolbar" aria-label="Language selector">
+      <div class="lang-buttons">
+        <button id="btn-ko" class="active" type="button" onclick="showLang('ko')">한국어</button>
+        <button id="btn-en" type="button" onclick="showLang('en')">English</button>
+      </div>
+      <p class="note">Use the buttons to switch language. / 버튼으로 언어를 전환할 수 있습니다.</p>
+    </div>
 
-  <p>
-    WithLink(이하 “앱”)은 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다.
-    본 앱은 사용자 데이터의 로컬 저장 방식을 기반으로 하며,
-    별도의 서버로 개인정보를 수집하거나 저장하지 않습니다.
-  </p>
+    <main class="policy">
+      <section id="ko" lang="ko">
+        <h1>개인정보처리방침</h1>
+        <p class="meta">최종 업데이트: 2026년 5월 13일</p>
 
-  <h2>1. 수집 및 저장되는 정보</h2>
-  <p>본 앱은 회원가입이나 서버 기반 수집 기능을 제공하지 않습니다.</p>
-  <p>다만, 다음과 같은 정보는 사용자의 기기 내에 로컬로 저장됩니다:</p>
-  <ul>
-    <li>사용자가 직접 입력한 링크(URL)</li>
-    <li>QR 코드를 통해 저장된 링크 정보</li>
-    <li>메모 및 카테고리 정보</li>
-  </ul>
-  <p>
-    👉 해당 정보는 외부 서버로 전송되지 않으며, 오직 사용자 기기 내부에만 저장됩니다.
-  </p>
+        <div class="highlight">
+          withLink는 사용자가 저장한 링크, 메모, 시간, 장소 및 위치 정보를 개발자 서버로 전송하지 않습니다. 이러한 정보는 기본적으로 사용자의 기기 내 로컬 저장소에 저장됩니다.
+        </div>
 
-  <h2>2. 개인정보 수집 여부</h2>
-  <p>
-    본 앱은 이름, 이메일, 연락처 등 개인을 식별할 수 있는 정보를 직접 수집하지 않습니다.
-  </p>
-  <p>다만, 광고 서비스 이용 과정에서 다음 정보가 자동으로 수집될 수 있습니다:</p>
-  <ul>
-    <li>광고 식별자 (Advertising ID)</li>
-    <li>기기 정보 (OS, 기기 모델 등)</li>
-    <li>앱 사용 정보 (접속 시간, 이용 패턴 등)</li>
-  </ul>
+        <h2>1. 개요</h2>
+        <p>
+          withLink(이하 “앱”)는 사용자가 링크를 저장할 때 해당 링크와 관련된 사람, 시간, 장소, 메모 등 연결의 맥락을 함께 기록하고 관리할 수 있도록 돕는 앱입니다.
+        </p>
+        <p>
+          본 개인정보처리방침은 앱이 사용자 정보를 어떻게 접근, 저장, 이용하는지 설명합니다.
+        </p>
 
-  <h2>3. 개인정보 수집 방법</h2>
-  <p>다음 서비스를 통해 일부 정보가 자동으로 수집될 수 있습니다:</p>
-  <ul>
-    <li>Google AdMob 광고 SDK</li>
-  </ul>
+        <h2>2. 기본 원칙</h2>
+        <ul>
+          <li>앱은 계정 가입이나 로그인을 요구하지 않습니다.</li>
+          <li>앱은 사용자의 이름, 이메일 주소, 전화번호, 집 주소 등의 연락처 정보를 가입 정보로 요구하지 않습니다.</li>
+          <li>사용자가 앱에 저장한 링크, 메모, 시간, 장소 및 위치 정보는 기본적으로 사용자의 기기 내에 저장됩니다.</li>
+          <li>withLink는 사용자가 저장한 정보를 개발자 서버로 전송하지 않습니다.</li>
+          <li>withLink는 사용자가 저장한 정보를 광고, 사용자 추적, 판매 목적으로 사용하지 않습니다.</li>
+        </ul>
 
-  <h2>4. 개인정보 이용 목적</h2>
-  <p>자동 수집된 정보는 다음 목적으로 사용될 수 있습니다:</p>
-  <ul>
-    <li>맞춤형 광고 제공</li>
-    <li>광고 성과 분석</li>
-    <li>서비스 품질 개선</li>
-  </ul>
+        <h2>3. 앱에 저장될 수 있는 정보</h2>
+        <p>사용자가 앱 기능을 이용하는 과정에서 다음 정보가 기기 내에 저장될 수 있습니다.</p>
+        <ul>
+          <li>QR 코드 또는 직접 입력으로 저장한 링크(URL)</li>
+          <li>링크와 관련된 제목, 메모, 카테고리, 태그</li>
+          <li>사용자가 직접 입력한 사람 이름, 별칭, 소속, 관계 메모 등의 정보</li>
+          <li>링크를 저장한 날짜와 시간</li>
+          <li>사용자가 허용하거나 직접 선택한 장소 및 위치 정보</li>
+          <li>앱 설정값 및 사용자가 앱 안에서 관리하는 로컬 데이터</li>
+        </ul>
+        <p>
+          위 정보는 앱의 핵심 기능을 제공하기 위해 사용자의 기기 내에서만 사용됩니다. 사용자가 메모나 사람 정보에 타인의 이름, 연락처, 링크 등을 직접 입력하는 경우에도, 해당 정보는 개발자 서버로 전송되지 않고 기기 내에 저장됩니다.
+        </p>
 
-  <h2>5. 백업 및 복원 기능</h2>
-  <p>
-    본 앱은 사용자 데이터 보호를 위해 백업 및 복원 기능을 제공합니다.
-  </p>
-  <ul>
-    <li>백업: 데이터를 파일 형태로 사용자 기기에 저장</li>
-    <li>복원(업로드): 저장된 백업 파일을 다시 불러오기</li>
-  </ul>
-  <p>
-    👉 해당 과정은 사용자의 기기 내에서만 수행되며,<br />
-    👉 어떠한 데이터도 외부 서버로 전송되거나 수집되지 않습니다.
-  </p>
+        <h2>4. 위치정보 사용</h2>
+        <p>
+          withLink는 사용자가 링크를 저장할 때 “어디에서 만났는지” 또는 “어디에서 링크를 저장했는지”를 기억할 수 있도록 위치정보를 사용할 수 있습니다.
+        </p>
+        <ul>
+          <li>위치정보는 사용자가 앱 권한을 허용한 경우에만 사용됩니다.</li>
+          <li>저장된 위치정보는 기본적으로 사용자의 기기 내에 저장됩니다.</li>
+          <li>withLink는 위치정보를 개발자 서버로 전송하지 않습니다.</li>
+          <li>withLink는 위치정보를 광고 또는 사용자 추적 목적으로 사용하지 않습니다.</li>
+          <li>사용자는 기기 설정에서 위치 권한을 변경하거나 철회할 수 있습니다.</li>
+        </ul>
 
-  <h2>6. 제3자 제공</h2>
-  <p>
-    본 앱은 사용자 데이터를 직접 제3자에게 제공하지 않습니다.
-  </p>
-  <p>다만, 광고 서비스 제공을 위해 아래 업체가 데이터를 수집 및 처리할 수 있습니다:</p>
-  <ul>
-    <li>Google AdMob</li>
-  </ul>
-  <p>
-    해당 업체의 개인정보처리방침은 아래에서 확인할 수 있습니다:<br />
-    👉 <a href="https://policies.google.com/privacy" target="_blank">
-    https://policies.google.com/privacy</a>
-  </p>
+        <h2>5. 카메라 및 QR 코드 스캔</h2>
+        <p>
+          withLink는 QR 코드를 스캔하여 링크를 저장하기 위해 카메라 권한을 사용할 수 있습니다.
+        </p>
+        <ul>
+          <li>카메라는 QR 코드 인식을 위한 목적으로 사용됩니다.</li>
+          <li>withLink는 QR 스캔 과정의 사진이나 동영상을 개발자 서버로 전송하지 않습니다.</li>
+          <li>QR 코드에서 읽은 링크 또는 관련 정보는 사용자가 저장하는 경우 기기 내에 저장될 수 있습니다.</li>
+        </ul>
 
-  <h2>7. 개인정보 보유 및 이용 기간</h2>
-  <p>
-    본 앱은 개인정보를 별도로 수집하거나 서버에 저장하지 않습니다.
-    광고 서비스 제공자가 수집한 정보는 해당 업체의 정책에 따릅니다.
-  </p>
+        <h2>6. 서버 전송 및 제3자 제공</h2>
+        <p>
+          withLink는 사용자가 저장한 링크, 메모, 시간, 장소 및 위치 정보를 개발자 서버로 전송하지 않습니다.
+        </p>
+        <p>
+          withLink는 사용자가 저장한 정보를 제3자에게 판매하거나 제공하지 않습니다.
+        </p>
+        <p>
+          다만 사용자가 앱 안에서 외부 링크를 열거나, 공유 기능을 사용하거나, 다른 앱 또는 외부 서비스를 이용하는 경우에는 해당 외부 서비스의 개인정보처리방침과 이용약관이 적용될 수 있습니다.
+        </p>
 
-  <h2>8. 이용자의 권리</h2>
-  <p>
-    이용자는 기기 설정을 통해 광고 맞춤 설정을 제한할 수 있습니다.
-  </p>
-  <ul>
-    <li>Android: 설정 → 개인정보 보호 → 광고 → 광고 맞춤설정 해제</li>
-  </ul>
+        <h2>7. 데이터 저장, 백업 및 기기 변경</h2>
+        <p>
+          withLink는 별도의 서버 기반 백업 또는 클라우드 동기화 기능을 제공하지 않습니다.
+        </p>
+        <ul>
+          <li>앱을 삭제하는 경우 저장된 데이터가 사라질 수 있습니다.</li>
+          <li>기기를 초기화하는 경우 저장된 데이터가 사라질 수 있습니다.</li>
+          <li>새 기기로 변경하는 경우 저장된 데이터가 자동으로 이전되지 않을 수 있습니다.</li>
+          <li>사용자는 기기 변경, 앱 삭제 또는 기기 초기화 전에 필요한 데이터를 직접 백업하거나 내보내야 합니다.</li>
+        </ul>
+        <p>
+          사용자의 Android 기기 설정 또는 Google 계정 백업 설정에 따라 앱 데이터가 Android 또는 Google 계정 백업 기능에 포함될 수 있습니다. 이러한 백업은 사용자의 기기 및 Google 계정 설정에 따라 처리되며, withLink가 개발자 서버로 데이터를 전송하는 것은 아닙니다.
+        </p>
 
-  <h2>9. 외부 링크</h2>
-  <p>본 앱은 다음과 같은 경우 외부 웹페이지로 이동할 수 있습니다:</p>
-  <ul>
-    <li>사용자가 저장한 링크 실행 시</li>
-    <li>광고 클릭 시</li>
-  </ul>
-  <p>
-    외부 사이트에서의 개인정보 처리에 대해서는 해당 사이트 또는 광고 제공자의 정책이 적용됩니다.
-  </p>
+        <h2>8. 데이터 보관 및 삭제</h2>
+        <p>
+          사용자가 저장한 데이터는 사용자가 삭제하기 전까지 기기 내에 보관될 수 있습니다.
+        </p>
+        <ul>
+          <li>사용자는 앱 안에서 저장한 기록을 삭제할 수 있습니다.</li>
+          <li>사용자는 기기의 앱 데이터 삭제 기능을 통해 로컬 데이터를 삭제할 수 있습니다.</li>
+          <li>앱을 삭제하면 기기 내에 저장된 앱 데이터가 삭제될 수 있습니다.</li>
+        </ul>
+        <p>
+          단, Android 또는 Google 계정 백업 기능에 의해 별도로 백업된 데이터가 있는 경우 해당 백업 데이터의 삭제 및 관리는 사용자의 기기 또는 Google 계정 설정에 따릅니다.
+        </p>
 
-  <h2>10. 개인정보 보호</h2>
-  <p>
-    본 앱은 사용자 데이터를 외부로 전송하지 않으며,
-    모든 데이터는 사용자 기기 내에서 안전하게 관리됩니다.
-  </p>
+        <h2>9. 광고, 분석 및 추적</h2>
+        <p>
+          withLink는 사용자가 저장한 링크, 메모, 시간, 장소 및 위치 정보를 광고, 사용자 추적 또는 판매 목적으로 사용하지 않습니다.
+        </p>
+        <p>
+          향후 광고 SDK, 분석 SDK, 오류 수집 도구, 서버 동기화 또는 클라우드 백업 기능이 추가되는 경우, 본 개인정보처리방침과 Google Play 데이터 보안 정보는 실제 데이터 처리 방식에 맞게 업데이트됩니다.
+        </p>
 
-  <h2>11. 정책 변경</h2>
-  <p>
-    본 개인정보처리방침은 법령 또는 서비스 변경에 따라 수정될 수 있으며,
-    변경 시 앱 또는 공지를 통해 안내됩니다.
-  </p>
+        <h2>10. 아동의 개인정보</h2>
+        <p>
+          withLink는 아동의 개인정보를 의도적으로 수집하지 않습니다. 앱 이용 중 아동의 개인정보가 사용자가 직접 입력한 메모나 기록에 포함되는 경우, 해당 정보는 기본적으로 사용자의 기기 내에 저장됩니다.
+        </p>
 
-  <h2>12. 문의</h2>
-  <p>
-    개인정보 관련 문의는 아래로 연락 바랍니다.<br />
-    이메일: yunii.studio.lab@gmail.com
-  </p>
+        <h2>11. 보안</h2>
+        <p>
+          withLink는 사용자가 저장한 정보를 기기 내에 보관하는 것을 기본 원칙으로 합니다. 사용자는 기기 잠금, 운영체제 보안 업데이트, 백업 관리 등을 통해 자신의 데이터를 안전하게 관리해야 합니다.
+        </p>
+        <p>
+          로컬 저장 방식은 개발자 서버로 데이터를 전송하지 않는 장점이 있지만, 기기 분실, 앱 삭제, 기기 초기화 또는 백업 실패 시 데이터가 손실될 수 있습니다.
+        </p>
 
+        <h2>12. 개인정보처리방침의 변경</h2>
+        <p>
+          본 개인정보처리방침은 앱 기능, 데이터 처리 방식, 관련 정책 변경에 따라 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시됩니다.
+        </p>
+
+        <h2>13. 문의</h2>
+        <p>
+          본 개인정보처리방침에 대한 문의는 아래 이메일로 연락해 주세요.
+        </p>
+        <p><strong>이메일:</strong> [support email]</p>
+      </section>
+
+      <section id="en" lang="en" class="hidden">
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: May 13, 2026</p>
+
+        <div class="todo">
+          Before publishing: replace [support email] with your actual app support email address.
+        </div>
+
+        <div class="highlight">
+          withLink does not send your saved links, notes, time, place, or location information to our servers. This information is stored locally on your device by default.
+        </div>
+
+        <h2>1. Overview</h2>
+        <p>
+          withLink (“the App”) helps users save links together with the context behind them, such as the person, time, place, and notes connected to each link.
+        </p>
+        <p>
+          This Privacy Policy explains how the App accesses, stores, and uses information.
+        </p>
+
+        <h2>2. Basic Principles</h2>
+        <ul>
+          <li>The App does not require account registration or login.</li>
+          <li>The App does not require your name, email address, phone number, home address, or other contact information as account information.</li>
+          <li>The links, notes, time, place, and location information you save in the App are stored locally on your device by default.</li>
+          <li>withLink does not send your saved information to our servers.</li>
+          <li>withLink does not use your saved information for advertising, user tracking, or sale.</li>
+        </ul>
+
+        <h2>3. Information That May Be Stored in the App</h2>
+        <p>The following information may be stored locally on your device when you use the App:</p>
+        <ul>
+          <li>Links or URLs saved through QR codes or direct input</li>
+          <li>Titles, notes, categories, and tags related to saved links</li>
+          <li>Person names, nicknames, organizations, relationship notes, or other details you manually enter</li>
+          <li>The date and time when a link is saved</li>
+          <li>Place or location information that you allow the App to use or manually select</li>
+          <li>App settings and other local data managed inside the App</li>
+        </ul>
+        <p>
+          This information is used only on your device to provide the App’s core features. If you manually enter another person’s name, contact details, links, or other information in notes or person-related fields, that information is not sent to our servers and remains stored locally on your device.
+        </p>
+
+        <h2>4. Location Information</h2>
+        <p>
+          withLink may use location information to help you remember where you met someone or where a link was saved.
+        </p>
+        <ul>
+          <li>Location information is used only when you allow the App to access it.</li>
+          <li>Saved location information is stored locally on your device by default.</li>
+          <li>withLink does not send location information to our servers.</li>
+          <li>withLink does not use location information for advertising or user tracking.</li>
+          <li>You can change or revoke location permission in your device settings.</li>
+        </ul>
+
+        <h2>5. Camera and QR Code Scanning</h2>
+        <p>
+          withLink may use camera permission to scan QR codes and save links.
+        </p>
+        <ul>
+          <li>The camera is used for QR code recognition.</li>
+          <li>withLink does not send photos or videos from the QR scanning process to our servers.</li>
+          <li>Links or related information read from a QR code may be stored locally on your device if you choose to save them.</li>
+        </ul>
+
+        <h2>6. Server Transfer and Sharing with Third Parties</h2>
+        <p>
+          withLink does not send your saved links, notes, time, place, or location information to our servers.
+        </p>
+        <p>
+          withLink does not sell or provide your saved information to third parties.
+        </p>
+        <p>
+          However, if you open an external link, use a sharing feature, or use another app or external service, the privacy policy and terms of that external service may apply.
+        </p>
+
+        <h2>7. Data Storage, Backup, and Device Changes</h2>
+        <p>
+          withLink does not provide server-based backup or cloud synchronization.
+        </p>
+        <ul>
+          <li>If you delete the App, your saved data may be lost.</li>
+          <li>If you reset your device, your saved data may be lost.</li>
+          <li>If you switch to a new device, your saved data may not be transferred automatically.</li>
+          <li>You are responsible for backing up or exporting any necessary data before changing devices, deleting the App, or resetting your device.</li>
+        </ul>
+        <p>
+          Depending on your Android device settings or Google account backup settings, App data may be included in Android or Google account backup features. Such backups are handled according to your device and Google account settings. withLink does not send your data to our servers.
+        </p>
+
+        <h2>8. Data Retention and Deletion</h2>
+        <p>
+          Data you save may remain stored locally on your device until you delete it.
+        </p>
+        <ul>
+          <li>You can delete saved records inside the App.</li>
+          <li>You can delete local data using your device’s app data deletion features.</li>
+          <li>Deleting the App may delete locally stored App data from your device.</li>
+        </ul>
+        <p>
+          If data has been separately backed up through Android or Google account backup features, deletion and management of that backup data are handled according to your device or Google account settings.
+        </p>
+
+        <h2>9. Advertising, Analytics, and Tracking</h2>
+        <p>
+          withLink does not use your saved links, notes, time, place, or location information for advertising, user tracking, or sale.
+        </p>
+        <p>
+          If advertising SDKs, analytics SDKs, crash reporting tools, server synchronization, or cloud backup features are added in the future, this Privacy Policy and the Google Play Data safety information will be updated to reflect the actual data practices.
+        </p>
+
+        <h2>10. Children’s Privacy</h2>
+        <p>
+          withLink does not knowingly collect children’s personal information. If children’s personal information is manually entered by a user in notes or records, that information is stored locally on the user’s device by default.
+        </p>
+
+        <h2>11. Security</h2>
+        <p>
+          withLink is designed to keep saved information locally on your device by default. You are responsible for protecting your data through device lock settings, operating system security updates, and backup management.
+        </p>
+        <p>
+          Local storage has the benefit of not sending your data to our servers, but your data may be lost if your device is lost, the App is deleted, your device is reset, or backup fails.
+        </p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>
+          This Privacy Policy may be updated when App features, data practices, or relevant policies change. Any changes will be posted on this page.
+        </p>
+
+        <h2>13. Contact</h2>
+        <p>
+          If you have any questions about this Privacy Policy, please contact us at:
+        </p>
+        <p><strong>Email:</strong> [support email: yunii.studio.lab@gmail.com]</p>
+      </section>
+    </main>
+
+    <footer>
+      © withLink. This page is provided for privacy policy disclosure.
+    </footer>
+  </div>
+
+  <script>
+    function showLang(lang) {
+      const ko = document.getElementById('ko');
+      const en = document.getElementById('en');
+      const btnKo = document.getElementById('btn-ko');
+      const btnEn = document.getElementById('btn-en');
+
+      if (lang === 'en') {
+        ko.classList.add('hidden');
+        en.classList.remove('hidden');
+        btnKo.classList.remove('active');
+        btnEn.classList.add('active');
+        document.documentElement.lang = 'en';
+        if (location.hash !== '#en') history.replaceState(null, '', '#en');
+      } else {
+        en.classList.add('hidden');
+        ko.classList.remove('hidden');
+        btnEn.classList.remove('active');
+        btnKo.classList.add('active');
+        document.documentElement.lang = 'ko';
+        if (location.hash !== '#ko') history.replaceState(null, '', '#ko');
+      }
+    }
+
+    (function initLanguage() {
+      const hash = (location.hash || '').replace('#', '').toLowerCase();
+      if (hash === 'en') {
+        showLang('en');
+      } else if (hash === 'ko') {
+        showLang('ko');
+      }
+    })();
+  </script>
 </body>
 </html>
